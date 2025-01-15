@@ -5,6 +5,5 @@ public class App {
 
         MainMenu mainMenu = new MainMenu();  //create object to call method
         mainMenu.printMainMenu();//printMainMenu is method being called from MainMenu
-
     }
 }

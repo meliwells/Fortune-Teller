@@ -5,30 +5,30 @@ import java.util.Scanner;
 public class MainMenu {
     Scanner scanner = new Scanner(System.in);
     FortuneTeller fortuneTeller = new FortuneTeller();
+    boolean isRunning = true;
 
     private static final int CHOICE_GET_A_PERSONALIZED_FORTUNE  = 1;
     private static final int CHOICE_SELECT_A_FORTUNE_TELLER = 2;
     private static final int CHOICE_QUIT = 3;
 
         public void selectChoice() {
-            //while (true) {
-            int choice = scanner.nextInt();
-            switch (choice) {
-                case CHOICE_GET_A_PERSONALIZED_FORTUNE:
-                    System.out.println("You selected a personalized fortune.");
-                    fortuneTeller.getAPersonalizedFortune();
-                    break;
-                case CHOICE_SELECT_A_FORTUNE_TELLER:
-                    System.out.println("You would like a fortune teller to give you a fortune. ");
-                    fortuneTeller.selectTeller();
-                    break;
-                case CHOICE_QUIT:
-                    System.out.println("Thank you for visiting. Please come back soon to get a fortune.");
-                    break; //return;
-            }
-        //}
-
-    }
+                int choice = scanner.nextInt();
+                switch (choice) {
+                    case CHOICE_GET_A_PERSONALIZED_FORTUNE:
+                        System.out.println("You selected a personalized fortune.");
+                        fortuneTeller.getAPersonalizedFortune();
+                        break;
+                    case CHOICE_SELECT_A_FORTUNE_TELLER:
+                        System.out.println("You would like a fortune teller to give you a fortune. ");
+                        fortuneTeller.selectTeller();
+                        break;
+                    case CHOICE_QUIT:
+                        System.out.println("Thank you for visiting. Please come back soon to get a fortune.");
+                        isRunning = false;
+                    default:
+                        System.out.println("Invalid choice. Please try again.");
+                }
+        }
 
    /* public MainMenu(Scanner scanner, String userName, String color, ArrayList<String> personalFortune) {
         this.scanner = scanner;
@@ -62,13 +62,16 @@ public class MainMenu {
     }
 */
     public void printMainMenu() {
-        System.out.println("Welcome to Mystic \nThe Fortune Telling App\n");
-        System.out.println("--- Main Menu ---");
-        System.out.println(CHOICE_GET_A_PERSONALIZED_FORTUNE + ". Get a personalized fortune");
-        System.out.println(CHOICE_SELECT_A_FORTUNE_TELLER + ". Select a fortune teller");
-        System.out.println(CHOICE_QUIT + ". Quit");
-        System.out.println("> ");
-        selectChoice();
+        while (isRunning) {
+            System.out.println("Welcome to Mystic \nThe Fortune Telling App\n");
+            System.out.println("--- Main Menu ---");
+            System.out.println(CHOICE_GET_A_PERSONALIZED_FORTUNE + ". Get a personalized fortune");
+            System.out.println(CHOICE_SELECT_A_FORTUNE_TELLER + ". Select a fortune teller");
+            System.out.println(CHOICE_QUIT + ". Quit");
+            System.out.println("> ");
+            selectChoice();
+            //isRunning = false;
+        }
     }
 }
 
