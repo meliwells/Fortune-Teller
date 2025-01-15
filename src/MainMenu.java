@@ -1,22 +1,14 @@
-package src;
 
-import java.util.ArrayList;
+package src;
 import java.util.Scanner;
 
 public class MainMenu {
     Scanner scanner = new Scanner(System.in);
     FortuneTeller fortuneTeller = new FortuneTeller();
-    String username;
-/*
-    String Color;
-    ArrayList<String> personalFortune = new ArrayList<>();
-*/
+
     private static final int CHOICE_GET_A_PERSONALIZED_FORTUNE  = 1;
     private static final int CHOICE_SELECT_A_FORTUNE_TELLER = 2;
     private static final int CHOICE_QUIT = 3;
-    //private static final FortuneTeller [] fortuneTeller = new FortuneTeller[3];
-    //private static final ColorChoice [] colorChoice = new ColorChoice[4];
-
 
         public void selectChoice() {
             //while (true) {
@@ -28,7 +20,7 @@ public class MainMenu {
                     break;
                 case CHOICE_SELECT_A_FORTUNE_TELLER:
                     System.out.println("You would like a fortune teller to give you a fortune. ");
-                    //selectAFortuneTeller();
+                    fortuneTeller.selectTeller();
                     break;
                 case CHOICE_QUIT:
                     System.out.println("Thank you for visiting. Please come back soon to get a fortune.");
@@ -68,14 +60,6 @@ public class MainMenu {
     public void setColor(String color) {
         Color = color;
     }
-
-    public ArrayList<String> getPersonalFortune() {
-        return personalFortune;
-    }
-
-    public void setPersonalFortune(ArrayList<String> personalFortune) {
-        this.personalFortune = personalFortune;
-    }
 */
     public void printMainMenu() {
         System.out.println("Welcome to Mystic \nThe Fortune Telling App\n");
@@ -86,25 +70,5 @@ public class MainMenu {
         System.out.println("> ");
         selectChoice();
     }
+}
 
-        /*Prints out Hello "name" Then asks to pick a color out of the following: Blue, Pink, Yellow, Green.
-                Color chosen will provide a fortune:
-        colorChoice[0] = new ColorChoice ("Blue", "An unexpected relationship will become permanent.")
-        Pink:   "You will soon embark on a fabulous journey."
-        Yellow: "Your kindness will lead you to success."
-        Green:  "Your sense of humor will light up someone's day."
-        After fortune given,exits the program with a thank you for playing message. */
-    }
-
-    //public void selectAFortuneTeller() {
-           // System.out.println("Select a fortune teller from the following list: ");
-
-    /*
-    fortuneTeller[0] = new FortuneTeller ("Starbloom", "Happiness is in your future... especially if you remember where you hid that last piece of chocolate." );
-    fortuneTeller[1] = new FortuneTeller ("Firewalker", "Happiness begins with facing life with a smile and a wink." );
-    fortuneTeller[2] = new FortuneTeller ("Moonwater", "Your life will be filled with sunshine and rainbows... and the occasional thunderstorm.");
-    */
-
-       // }
-
-//}
