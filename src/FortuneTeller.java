@@ -1,11 +1,13 @@
 package src;
 
+import java.util.Scanner;
+
 public class FortuneTeller {
 
     String fortuneTellerName;
     String fortuneTellerMessage;
 
-    public FortuneTeller(String fortuneTellerName, String fortuneTellerMessage) {
+    public FortuneTeller() {
         this.fortuneTellerName = fortuneTellerName;
         this.fortuneTellerMessage = fortuneTellerMessage;
     }
@@ -28,6 +30,14 @@ public class FortuneTeller {
 
     public void fortuneTeller() {
         //print fortunes
+    }
+
+    public void getAPersonalizedFortune() {
+        System.out.println("Enter your name: ");
+        Scanner scanner = new Scanner(System.in);
+        String username = scanner.nextLine();
+        System.out.println("Hello " + username + "!");
+        System.out.println("Please select the color you like the most: ");
     }
 
 }
