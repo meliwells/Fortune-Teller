@@ -25,8 +25,8 @@ public class MainMenu {
                     case CHOICE_QUIT:
                         System.out.println("Thank you for visiting. Please come back soon to get a fortune.");
                         isRunning = false;
-                    default:
-                        System.out.println("Invalid choice. Please try again.");
+                    //default:
+                        //System.out.println("Invalid choice. Please try again.");
                 }
         }
 
@@ -70,7 +70,6 @@ public class MainMenu {
             System.out.println(CHOICE_QUIT + ". Quit");
             System.out.println("> ");
             selectChoice();
-            //isRunning = false;
         }
     }
 }

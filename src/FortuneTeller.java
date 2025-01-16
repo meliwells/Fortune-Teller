@@ -48,10 +48,10 @@ public class FortuneTeller {
         System.out.println("Hello " + username + "!");
         System.out.println("Please select the color you like the most: ");
         //print color choices here
-        System.out.println(CHOICE_BLUE + " Blue");
-        System.out.println(CHOICE_PINK + " Pink");
-        System.out.println(CHOICE_YELLOW + " Yellow");
-        System.out.println(CHOICE_GREEN + " Green");
+        System.out.println(CHOICE_BLUE + ". Blue");
+        System.out.println(CHOICE_PINK + ". Pink");
+        System.out.println(CHOICE_YELLOW + ". Yellow");
+        System.out.println(CHOICE_GREEN + ". Green");
         //color switch here
         int choice = scanner.nextInt();
         switch (choice) {
@@ -74,9 +74,9 @@ public class FortuneTeller {
         System.out.println("Select a fortune teller from the following list: ");
         Scanner scanner = new Scanner(System.in);
         //switch for teller goes here
-        System.out.println(TELLER_STARBLOOM + " Starbloom");
-        System.out.println(TELLER_FIREWALKER + " Firewalker");
-        System.out.println(TELLER_MOONWATER + " Moonwater");
+        System.out.println(TELLER_STARBLOOM + ". Starbloom");
+        System.out.println(TELLER_FIREWALKER + ". Firewalker");
+        System.out.println(TELLER_MOONWATER + ". Moonwater");
         int choice = scanner.nextInt();
         switch (choice) {
             case TELLER_STARBLOOM:
